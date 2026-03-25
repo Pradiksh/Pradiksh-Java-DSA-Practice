@@ -18,7 +18,7 @@
 //
 //
 //Follow up: Could you minimize the total number of operations done?
-package Arrays;
+package Arrays.TwoPointers;
 
 import java.util.Arrays;
 public class MoveZeroes {
