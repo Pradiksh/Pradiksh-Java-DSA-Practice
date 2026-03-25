@@ -48,7 +48,7 @@
 //        -100 <= nums[i] <= 100
 //nums is sorted in non-decreasing order.
 
-package Arrays;
+package Arrays.TwoPointers;
 
 public class RemoveDuplicates {
     public int removeDuplicates(int[] nums) {
