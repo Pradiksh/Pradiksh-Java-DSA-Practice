@@ -65,11 +65,11 @@ public class RemoveDuplicates {
         return left;
     }
 
-    static void main(String[] args) {
+    public static void main(String[] args) {
         int[] arr = {0,0,1,1,1,2,2,3,3,4};
         RemoveDuplicates ob1 = new RemoveDuplicates();
-       int ans = ob1.removeDuplicates(arr);
-       System.out.print(ans);
+        int ans = ob1.removeDuplicates(arr);
+        System.out.print(ans);
 
     }
 }

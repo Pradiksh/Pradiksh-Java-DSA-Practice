@@ -44,12 +44,12 @@ public class MaxSumSubArrayofK {
         return maximum;
     }
 
-    static void main(String[] args) {
-int[] arr = {100,200,300,400};
-int k=2;
+    public static void main(String[] args) {
+        int[] arr = {100,200,300,400};
+        int k=2;
         MaxSumSubArrayofK ob1 = new MaxSumSubArrayofK();
-       int ans =  ob1.maxSubarraySum(arr,k);
+        int ans =  ob1.maxSubarraySum(arr,k);
 
-       System.out.println(ans);
+        System.out.println(ans);
     }
 }

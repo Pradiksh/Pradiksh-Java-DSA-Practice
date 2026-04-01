@@ -5,17 +5,15 @@ import java.util.HashSet;
 
 public class LongestSubstring {
     public int LongestStringMap(String s){
-        //We use two pointer, Sliding window approach with hash set
-        //we add the elements in hashmap then on finding duplicates we move the left pointer to its first occurence +1
-        //then iteration happens
+        // We use a sliding window and update the left pointer from the last seen index.
         int leftPointer =0;
         int maxLength = 0;
         HashMap<Character,Integer> charMap = new HashMap<>();
 
         for(int rightPointer=0;rightPointer<s.length();rightPointer++){
-            char Current = s.charAt(rightPointer);
-            if (charMap.containsKey(Current)){
-                int lastIndex = charMap.get(Current);
+            char current = s.charAt(rightPointer);
+            if (charMap.containsKey(current)){
+                int lastIndex = charMap.get(current);
                 int newLeftPointer = lastIndex+1;
 
                 if (newLeftPointer>leftPointer){
@@ -25,7 +23,7 @@ public class LongestSubstring {
             }
 
 
-            charMap.put(Current,rightPointer);
+            charMap.put(current,rightPointer);
             maxLength=Math.max(maxLength,rightPointer-leftPointer+1);
 
         }
@@ -48,19 +46,19 @@ public class LongestSubstring {
                 leftPointer++;
             }
 
-charSet.add(s.charAt(rightPointer));
+            charSet.add(s.charAt(rightPointer));
             maxLength=Math.max(maxLength,rightPointer-leftPointer+1);
         }
-return maxLength;
+        return maxLength;
     }
-    static void main(String[] args) {
+    public static void main(String[] args) {
         String s= "PWWKEWXPW";
 
-        LongestSubstring OB1 = new LongestSubstring();
+        LongestSubstring ob1 = new LongestSubstring();
 
-        int ans2 = OB1.LongestStringMap(s);
-       int ans = OB1.LongestString(s);
-       System.out.println(ans);
+        int ans2 = ob1.LongestStringMap(s);
+        int ans = ob1.LongestString(s);
+        System.out.println(ans);
         System.out.println(ans2);
 
     }
