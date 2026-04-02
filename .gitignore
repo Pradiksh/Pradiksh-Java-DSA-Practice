@@ -1,4 +1,4 @@
-### IntelliJ IDEA ###
+git status### IntelliJ IDEA ###
 .idea/
 out/
 !**/src/main/**/out/
