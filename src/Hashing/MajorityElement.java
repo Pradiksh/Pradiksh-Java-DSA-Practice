@@ -1,0 +1,69 @@
+//Given an array nums of size n, return the majority element.
+//
+//The majority element is the element that appears more than ⌊n / 2⌋ times. You may assume that the majority element always exists in the array.
+//
+//
+//
+//Example 1:
+//
+//Input: nums = [3,2,3]
+//Output: 3
+//Example 2:
+//
+//Input: nums = [2,2,1,1,1,2,2]
+//Output: 2
+//
+//
+//Constraints:
+//
+//n == nums.length
+//1 <= n <= 5 * 104
+//        -109 <= nums[i] <= 109
+//The input is generated such that a majority element will exist in the array.
+//
+//
+//Follow-up: Could you solve the problem in linear time and in O(1) space?
+package Hashing;
+
+import java.util.HashMap;
+
+public class MajorityElement {
+    //HasMap Solution
+    public int majorityElement(int[] nums) {
+        int major = nums[0];
+HashMap<Integer, Integer> map = new HashMap<>();
+
+for(int i = 0; i<nums.length; i++){
+    map.put(nums[i], map.getOrDefault(nums[i],0)+1);
+
+}
+for(int key : map.keySet()){
+    if(map.get(key)>(nums.length/2))
+        major=key;
+}
+return major;
+    }
+
+//Moores Voting algo
+
+    public int majorityElement2(int[] nums) {
+        int majority = nums[0];
+        int vote =1;
+        for(int i = 1; i<nums.length;i++){
+            if(nums[i]==majority){
+                vote++;
+            }else
+                vote --;
+            if(vote==0){
+                majority = nums[i];
+                vote++;
+
+            }
+        }
+        return majority;
+    }
+
+    public static void main(String[] args) {
+
+    }
+}
