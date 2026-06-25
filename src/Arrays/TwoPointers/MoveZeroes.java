@@ -28,6 +28,7 @@ public class MoveZeroes {
         int n = nums.length;
         int left = 0;
         for(int right = 0; right<n;right++){
+            //We are leaving Zeroes and considering non zeroes
             if(nums[right]!=0){
                 int temp = nums[left];
                 nums[left] = nums[right];
