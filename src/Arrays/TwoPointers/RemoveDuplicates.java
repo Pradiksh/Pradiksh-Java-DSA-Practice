@@ -53,6 +53,7 @@ package Arrays.TwoPointers;
 public class RemoveDuplicates {
     public int removeDuplicates(int[] nums) {
 
+////Input: nums = [0,0,1,1,1,2,2,3,3,4]
         int n = nums.length;
         int left =1;
         for(int right = 1; right<n; right++){

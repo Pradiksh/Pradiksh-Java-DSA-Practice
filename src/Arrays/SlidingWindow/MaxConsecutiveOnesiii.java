@@ -51,7 +51,7 @@ while(rightPointer<n){
     if(Zeroes<=k){
         Maxlen = Math.max(Maxlen,rightPointer-leftPointer+1);
     }
-
+    rightPointer++;
 }
 return Maxlen;
 
